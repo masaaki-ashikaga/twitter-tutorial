@@ -15,8 +15,8 @@ class CreateTweetsTable extends Migration
     {
         Schema::create('tweets', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('user_id')->comment('ユーザーID');
-            $table->string('text')->commet('本文');
+            $table->unsignedInteger('user_id')->comment('ユーザID');
+            $table->string('text')->comment('本文');
             $table->softDeletes();
             $table->timestamps();
 
