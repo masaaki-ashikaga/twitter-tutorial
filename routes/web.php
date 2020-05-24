@@ -19,11 +19,13 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::group(['middleware' => 'auth'], function(){
-    //ユーザー関連
+Route::group(['middleware' => 'auth'], function() {
+
+    // ユーザ関連
     Route::resource('users', 'UsersController', ['only' => ['index', 'show', 'edit', 'update']]);
 
-    //フォロー/フォロー解除を追加
-    Route::post('usres/{user}/follow', 'UsersController@follow')->name('follow');
+    // フォロー/フォロー解除を追加
+    Route::post('users/{user}/follow', 'UsersController@follow')->name('follow');
     Route::delete('users/{user}/unfollow', 'UsersController@unfollow')->name('unfollow');
+
 });
