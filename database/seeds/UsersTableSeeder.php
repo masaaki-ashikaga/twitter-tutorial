@@ -17,7 +17,7 @@ class UsersTableSeeder extends Seeder
             User::create([
                 'screen_name'       => 'test_user'.$i,
                 'name'              => 'TEST'.$i,
-                'profile_image'     => 'https:://placehold.jp/50x50.png',
+                'profile_image'     => '5jSXLGNAbmg4lkAL4uMYFpxhVDkY5TRmhEXGS07R.jpeg',
                 'email'             => 'test' .$i. '@test.com',
                 'password'          => Hash::make('12345678'),
                 'remember_token'    => Str::random(10),
