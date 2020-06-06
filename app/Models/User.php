@@ -43,6 +43,7 @@ class User extends Authenticatable
     }
 
     //ここから追加
+    //自身のユーザーID以外のユーザーIDを取得
     public function getAllUsers(Int $user_id)
     {
         return $this->Where('id', '<>', $user_id)->paginate(5);
@@ -94,8 +95,6 @@ class User extends Authenticatable
         }
         return;
     }
-
-
 
     /**
      * The attributes that should be cast to native types.
