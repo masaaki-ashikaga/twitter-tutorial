@@ -31,4 +31,10 @@ Route::delete('users/{user}/unfollow', 'UsersController@unfollow')->name('unfoll
 
 //ツイート関連
 Route::resource('tweets', 'TweetsController', ['only' => ['index', 'create', 'store', 'show', 'edit', 'update', 'destroy']]);
+
+//コメント関連
+Route::resource('comments', 'CommentsController', ['only' => ['store']]);
+
+//いいね関連
+Route::resource('favorites', 'FavoritesController', ['only' => ['store', 'destroy']]);
 });
